@@ -1,1 +1,1 @@
-Unity only.
+Pixelate Shader for Unity URP

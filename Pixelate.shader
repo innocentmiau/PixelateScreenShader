@@ -30,7 +30,7 @@ Shader "PixelateScreenShader/Pixelate"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
             #include "Packages/com.unity.render-pipelines.core/Runtime/Utilities/Blit.hlsl"
             
-            SAMPLER(sampler_BlitTexture);
+            SAMPLER(sampler_point_clamp);
             
             float _PixelSize;
             
@@ -46,7 +46,7 @@ Shader "PixelateScreenShader/Pixelate"
                 
                 half4 col = SAMPLE_TEXTURE2D_X(
                     _BlitTexture,
-                    sampler_BlitTexture,
+                    sampler_point_clamp,
                     pixelatedUV
                 );
                 
